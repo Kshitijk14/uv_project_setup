@@ -20,3 +20,23 @@ mac/linux: ```pip freeze > requirements.txt```
 
 
 brain fck (but necessary): [Hynek Schlawack](https://www.youtube.com/watch?v=mFyE9xgeKcA)
+
+
+## RUFF
+1. find linting issues: ```ruff check main.py``` OR ```ruff check .```
+2. fix those linting issues: ```ruff check --fix```
+3. kinda like git diff: ```ruff check --fix --diff```
+4. whitespaces & all: ```ruff format```
+5. check for errors in real-time: ```ruff check --watch```
+
+
+## LOGGER
+![1755431679744](image/README/1755431679744.png)
+
+### Logging Tree
+![1755431796212](image/README/1755431796212.png)
+→ unnecessarily complex for most use-cases
+
+### Better way: put all logger handlers/filters on the root logger
+![1755431990037](image/README/1755431990037.png)
+→ however, don't use the root logger in code
